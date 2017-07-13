@@ -1,0 +1,9 @@
+http://www.drdobbs.com/cpp/tables-within-tables-c-and-brents-techni/199900579?pgno=2
+
+https://docs.python.org/3/faq/programming.html
+
+https://docs.python.org/3/faq/design.html#why-self
+
+http://foobarnbaz.com/2012/07/08/understanding-python-variables/
+
+http://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/
