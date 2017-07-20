@@ -7,6 +7,9 @@ initialized from these locations:
     PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).
     the installation-dependent default.
 
+    python.exe path/to/script.py
+    then path/to i.e. cwd is automatically added to the sys.path.
+
 After initialization, Python programs can modify sys.path.
 The directory containing the script being run i.e. CWD is placed at the beginning of the search path,
 ahead of the standard library path.
@@ -22,6 +25,13 @@ Relative means from the pacakge directory.
 To look from a file i.e. import a module from the same package in python 3
 the only possibility is to use thr from . relative form "from . import the_sibling_module".
 Python 2 does it by default then goes to sys.path.
-The relative form i.e. dot only works with the from form.
+The relative form i.e. dot form only works with the from form: "from ." .
+The relative form only works within a package.
 
-It'sanother example of the incompatible behavior in 3.X
+It's another example of the incompatible behavior in 3.X
+
+Relative imports apply to imports within packages only:
+ Keep in mind that this feature’s module search path change applies only to import statements
+ within module files used as part of a package—that is, intrapackage imports.
+
+Keep in mind a top-level file is run but not imported
