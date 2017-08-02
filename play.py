@@ -37,6 +37,7 @@ print('dedup3("ksjdkajsdkajksjdalsdjaksda") = {}'.format(dedup3("ksjdkajsdkajksj
 keys = {'red', 'green', 'blue', 'yellow', 'orange', 'pink', 'black'}
 d = dict.fromkeys(keys)
 print('d={}'.format(d))
+# Update the dictionary with the key/value pairs from other, overwriting existing keys.
 d.update(dict(d))
 print('d={}'.format(d))
 
@@ -193,3 +194,15 @@ def mysum3(lst):
 print 'sum should be 36', mysum3(l)
 print(mysum3([1, [2, [3, [4, [5]]]]]))
 print(mysum3([[[[[1], 2], 3], 4], 5]))
+
+
+from random import sample
+from random import seed
+from random import randrange
+
+seed(1234)
+population = [randrange(10,100,1) for i in range(100)]
+print('population = {}'.format(population))
+datapoints = [tuple(sample(population, 3)) for i in range(10)]
+abitrary_dp = sample(datapoints,2)
+print('abitrary datpoits = {}'.format(abitrary_dp))

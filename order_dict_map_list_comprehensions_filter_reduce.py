@@ -58,12 +58,18 @@ def rf(tr, t):
 rd = reduce(rf, d.iteritems())
 print('rd = {}'.format(dict([rd])))
 
-#considering to keep the order of the key with an order dict
+#considering to keep the order of the keys entered with an order dict
 from collections import OrderedDict
 od = OrderedDict(sorted(d.iteritems(), key = lambda t: t[0] )
 )
 rod = reduce(rf, od.iteritems())
 print('rod = {}'.format(dict([rod])))
+
+inline_od = OrderedDict(one=2,  beer='delicious', wisky='beurk', cider=1)
+# doesn't seem to really keep the order when inlined
+print('Simple ordered dict = {}'.format(inline_od))
+for k,v in inline_od.iteritems():
+    print(k,v)
 
 # creating a dictionary from a tuple of tuples (pairs) is weird you need to
 # put the tuple in a tuple followed by a comma
