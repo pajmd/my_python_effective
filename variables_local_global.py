@@ -53,7 +53,7 @@ def f():
     try:
 	    print s
     except Exception as ex:
-        print('Because of the assignment to s inside of f() puthon creates a reference, '
+        print('Because of the assignment to s inside of f() python creates a reference, '
               'but the first print statement throws this error message '
               'because it is not bound yet.\n{}'.format(ex))
 	s = "Me too."
