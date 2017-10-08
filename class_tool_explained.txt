@@ -1,0 +1,6 @@
+Note that if a sublclass does,'t define an __init__ method the super class init is run automatically from the sub class.
+
+self.__dir__ will list the atibute on the instance
+
+Note that to change the value of the class attibute in a method, obviously the class name should be prepend
+the attribute:  TopTest.count += 2

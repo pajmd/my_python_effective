@@ -22,7 +22,7 @@ def f(t):
     # t[1] = t[1] % 2  You can't modify a tuple
     return (t[0], t[1] % 2)
 
-d2 = map(lambda (k,v) : (k, v) , d.iteritems())
+d2 = map(lambda (k,v) : (v, k) , d.iteritems())
 print('d2 = {}'.format(d2))
 print('d2 = {}'.format(dict(d2)))
 
@@ -57,6 +57,7 @@ def rf(tr, t):
 # rd = reduce(lambda tr, t: tr + t, d.iteritems())
 rd = reduce(rf, d.iteritems())
 print('rd = {}'.format(dict([rd])))
+input('enter to continue')
 
 #considering to keep the order of the keys entered with an order dict
 from collections import OrderedDict

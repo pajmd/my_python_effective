@@ -99,6 +99,7 @@ print type(x)
 print((1,3) > (0,3))
 print((1,3) > (4,3))
 print((1,3) > (1,4))
+print((1,3) > (1,2))
 print((1,3) > (3, 1))
 
 
@@ -113,13 +114,14 @@ print((1,3) > (3, 1))
 # unicode = bytes.decode(utf-8)
 #
 u = u'\u6211' # \u says this unicode string contains a unincode wich is a chinese character
-print u
+print "u'\u6211'=",u
+print "len(u'\u6211') = ",len(u)
 u = u'6211' # this unicode string contains string 6211
-print u
+print "u'6211' = ", u
 
 chinese = u'\u6211'
 encoded = chinese.encode('utf-8')
-print encoded
+print "u'\u6211'.encode('utf-8') = ", encoded
 
 ch = u'\u9FCC'
 print(u'chinese char {} len={}'.format(ch, len(ch)))

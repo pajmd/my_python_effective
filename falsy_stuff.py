@@ -13,4 +13,5 @@
 #     instances of user-defined classes, if the class defines a __nonzero__() or __len__() method, when that method returns the integer zero or bool value False.2.5
 #
 # All other values are considered true -- so objects of many types are always true.
-
+#
+# to compare against True or False use is: if x is True: ...

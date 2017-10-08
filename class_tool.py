@@ -29,6 +29,8 @@ if __name__ == '__main__':
 
     class SubTest(TopTest):
         pass
+        # def __init__(self):
+        #     pass
 
 
 X, Y = TopTest(), SubTest()  # Make two instances

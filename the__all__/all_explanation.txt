@@ -1,0 +1,5 @@
+The __all__ = ['object', 'module'] makes it possible to export the particular listed objects or modules so
+a mobule importing using the forms (notice the single quoted list):
+- from some_package import *  ( __init__.py would contain the __all__ = [...]
+- from some module import *   ( the module.py would contain the __all__ = [...]
+would see only the exported objects or modules

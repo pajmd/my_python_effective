@@ -1,0 +1,29 @@
+Multiple Inheritance Search tree order:
+for intance:  from bottom, up
+for class, super classes left to right
+
+SuperA
+    x=1
+SuperB
+    x=2
+Sub(SuperA, SuperB)
+
+then Sub.x will be 1
+
+SuperA(object):
+    def __init__(self):
+        self.v =1
+
+SuperB(object):
+    def __init__(self):
+        self.v =2
+
+Sub(object):
+    def __init__(self):
+        SuperA.__init__(self)
+        SuperB.__init__(self)
+
+s = Sub()
+s.v will be 2 only because SuperB will be called second
+
+

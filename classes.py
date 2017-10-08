@@ -46,8 +46,8 @@ class Child(Super1, Super2):
     a_class_attribute = 99
 
     def __init__(self):
-        Super1.__init__(self)
         Super2.__init__(self)
+        Super1.__init__(self)
         self.v1 = 4
 
     def do_somethin(self):
@@ -70,9 +70,9 @@ if __name__ == '__main__':
     print('child x {}'.format(child.x))
     print('child y {}'.format(child.y))
     print('child z {}'.format(child.z)) # 11 is printed bc it is found first in Super1
-    print child.__class__
-    print child.__class__.__name__
-    print dir(child.__class__)
+    print 'child.__class__=', child.__class__
+    print 'child.__class__.__name__=', child.__class__.__name__
+    print 'dir(child.__class__)=',dir(child.__class__)
     print('\n__dict__ only contains the instance attribute')
     print('Child dict = {}'.format(child.__class__.__dict__))
     print('child dict = {}'.format(child.__dict__))
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     print ("child's module = {}".format(child.__module__))
     print ('dir on Child = {}'.format(dir(Child)))
 
-
+input('Enter to continue')
 #######################################################################################################################
 
 #  __getattr__ becomes very handy when composition is used instead of inheritence

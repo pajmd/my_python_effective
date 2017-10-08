@@ -1,0 +1,9 @@
+reduce:
+the key function gets passed the first 2 elemtents of the iterable and executes.
+If the iterable has only one element reduce returns it without calling the key function.
+
+map, reduce or filter when operate on a dict, the keys are the items.
+To act upon the k,v use dict.iteritems and in this case a tupe (k, v) gets passed.
+
+An collections.OrderedDict takes its' parameter just like if they were kwargs:
+OrderedDict(one=1, param='go knows')
