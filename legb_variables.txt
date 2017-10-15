@@ -1,0 +1,26 @@
+Multiple namespaces can exist independently from each other and they can contain the same variable names
+on different hierachy levels.
+The order Python searches the different levels of namespaces before it finds the name-to-object’ mapping
+is the LEGB-rule, which stands for
+
+Local -> Enclosed -> Global -> Built-in,
+
+where the arrows should denote the direction of the namespace-hierarchy search order.
+
+    Local can be inside a function or class method, for example.
+    Enclosed can be its enclosing function, e.g., if a function is wrapped inside another function.
+    Global refers to the uppermost level of the executing script itself, and
+    Built-in are special names that Python reserves for itself.
+
+So, if a particular name:object mapping cannot be found in the local namespaces,
+the namespaces of the enclosed scope are being searched next.
+If the search in the enclosed scope is unsuccessful, too, Python moves on to the global namespace,
+and eventually, it will search the built-in namespace
+(side note: if a name cannot found in any of the namespaces, a NameError will is raised).
+
+Gobal variables can only be modified inside a function if "global <variable-name>" is declared in the function
+before it is modified.
+Likewise in Python3 for variables defined in the outer function if "nonlocal <variable-name>" is declared
+in the inner function.
+
+
